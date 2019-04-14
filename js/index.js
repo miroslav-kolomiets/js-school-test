@@ -40,19 +40,6 @@ var params = {
       background: '#fff9',
       width: 50
     }]
-  }, {
-    background: 'orange',
-    updateTime: 1500,
-    elements: [{
-      background: '#fff2',
-      width: 25
-    }, {
-      background: '#fff5',
-      width: 25
-    }, {
-      background: '#fff9',
-      width: 50
-    }]
   }]
 };
 
