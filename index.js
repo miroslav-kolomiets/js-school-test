@@ -76,11 +76,11 @@ const renderElements = params => {
 }
 
 const getRandomColor = () => {
-    const color = "#" + ((1 << 24) * Math.random() | 0).toString(16);
-    return color;
+    const randomColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+    return randomColor;
 }
 
-const updateBackgroundColors = (params) => {
+const updateBackgroundColor = (params) => {
     const lines = params.lines;
     for (let i = 0; i < lines.length; i++) {
         let interval = lines[i].updateTime;
@@ -90,15 +90,15 @@ const updateBackgroundColors = (params) => {
 
 const setTimer = (id, timer) => {
     setInterval(() => {
-        const color = getRandomColor();
-        document.getElementById(`${id}`).style.backgroundColor = color;;
+        const updatedColor = getRandomColor();
+        document.getElementById(`${id}`).style.backgroundColor = updatedColor;;
     }, timer);
 }
 
 const render = (params) => {
     renderLines(params);
     renderElements(params);
-    updateBackgroundColors(params);
+    updateBackgroundColor(params);
 }
 
 document.addEventListener("DOMContentLoaded", render(params));
