@@ -1,10 +1,8 @@
 const params = {
-    lines: [
-        {
+    lines: [{
             background: 'green',
             updateTime: 500,
-            elements: [
-                {
+            elements: [{
                     background: '#fff2',
                     width: 25
                 },
@@ -21,8 +19,7 @@ const params = {
         {
             background: 'red',
             updateTime: 1000,
-            elements: [
-                {
+            elements: [{
                     background: '#fff2',
                     width: 50
                 },
@@ -39,8 +36,7 @@ const params = {
         {
             background: 'orange',
             updateTime: 1500,
-            elements: [
-                {
+            elements: [{
                     background: '#fff2',
                     width: 25
                 },
@@ -64,36 +60,36 @@ const lineHeight = () => {
 
 const renderLines = params => {
     const lines = params.lines;
-    lines.forEach(function (line, i) {
+    lines.forEach(function(line, i) {
         document.getElementById('root').innerHTML += `<div id="line-${i}" class="line" style="background: ${line.background}; height:${lineHeight()}"></div>`;
     });
 }
 
 const renderElements = params => {
     const lines = params.lines;
-    for (var i = 0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {
         let elements = lines[i].elements;
-        for (var k = 0; k < lines.length; k++) {
-            document.getElementById(`line-${i}`).innerHTML += `<div id="element-${k}" class="element" style="background: ${elements[k].background}; width:${elements[k].width}%; height: ${lineHeight()}"></div>`;
+        for (let k = 0; k < lines.length; k++) {
+            document.getElementById(`line-${i}`).innerHTML += `<div id="element-${i}-${k}" class="element" style="background: ${elements[k].background}; width:${elements[k].width}%; height: ${lineHeight()}"></div>`;
         }
     }
 }
 
 const getRandomColor = () => {
-    const color = "#"+((1<<24)*Math.random()|0).toString(16);
+    const color = "#" + ((1 << 24) * Math.random() | 0).toString(16);
     return color;
 }
 
 const updateBackgroundColors = (params) => {
     const lines = params.lines;
-    for (var i = 0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {
         let interval = lines[i].updateTime;
         setTimer(`line-${i}`, interval);
     }
 }
 
 const setTimer = (id, timer) => {
-    setInterval(function() { 
+    setInterval(() => {
         const color = getRandomColor();
         document.getElementById(`${id}`).style.backgroundColor = color;;
     }, timer);
