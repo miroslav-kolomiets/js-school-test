@@ -12,13 +12,8 @@ To start - clone repo and run:
 npm i
 ```
 
-To start dev server run: 
+To start dev local server run: 
 
 ```
 npm run dev
 ```
-
-To build files run: 
-
-```
-npm run build
