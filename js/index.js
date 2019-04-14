@@ -2,42 +2,42 @@
 
 var params = {
   lines: [{
-    background: 'green',
+    background: '#00f',
     updateTime: 500,
     elements: [{
-      background: '#fff2',
+      background: '#eff2f7',
       width: 25
     }, {
-      background: '#fff5',
+      background: '#c0a3c4',
       width: 50
     }, {
-      background: '#fff9',
+      background: '#f890e7',
       width: 25
     }]
   }, {
-    background: 'red',
+    background: '#00f',
     updateTime: 1000,
     elements: [{
-      background: '#fff2',
+      background: '#3393fd',
       width: 50
     }, {
-      background: '#fff5',
+      background: '#dadadc',
       width: 25
     }, {
-      background: '#fff9',
+      background: '#717171',
       width: 25
     }]
   }, {
-    background: 'orange',
+    background: '#00f',
     updateTime: 1500,
     elements: [{
-      background: '#fff2',
+      background: '#eff6e0',
       width: 25
     }, {
-      background: '#fff5',
+      background: '#124559',
       width: 25
     }, {
-      background: '#fff9',
+      background: '#e5e5ee',
       width: 50
     }]
   }]

@@ -11,4 +11,5 @@
 .element {
     display: flex;
     flex-direction: row;
+    opacity: 0.3;
 }
