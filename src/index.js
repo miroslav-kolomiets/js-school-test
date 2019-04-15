@@ -80,7 +80,7 @@ const getRandomColor = () => {
     return randomColor;
 }
 
-const updateBackgroundColor = (params) => {
+const updateBackgroundColor = params => {
     const lines = params.lines;
     for (let i = 0; i < lines.length; i++) {
         let interval = lines[i].updateTime;
@@ -95,7 +95,7 @@ const setTimer = (id, timer) => {
     }, timer);
 }
 
-const render = (params) => {
+const render = params => {
     renderLines(params);
     renderElements(params);
     updateBackgroundColor(params);

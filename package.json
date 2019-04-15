@@ -1,7 +1,7 @@
 {
   "name": "js-school",
   "version": "1.0.0",
-  "description": "",
+  "description": "test task for PDFFiller js-school",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -28,10 +28,10 @@
     "type": "git",
     "url": "git+https://github.com/miroslav-kolomiets/js-school-test.git"
   },
-  "author": "",
+  "author": "Miroslav Kolomiets",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/miroslav-kolomiets/js-school-test/issues"
   },
-  "homepage": "https://github.com/miroslav-kolomiets/js-school-test#readme"
+  "homepage": "https://miroslav-kolomiets.github.io/js-school-test/index.html"
 }
