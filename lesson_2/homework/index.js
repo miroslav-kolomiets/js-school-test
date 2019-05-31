@@ -7,14 +7,14 @@
  */
   function difference(arr, itemsToExclude) {
 
-    var newArr = []
+    var newArr = [];
     
     arr.forEach((elem) => itemsToExclude.includes(elem) ? null : newArr.push(elem))
     
-    console.log(newArr);
+    return newArr;
   }
   
-  difference([2, 1, 5], [2, 3]) 
+  console.log(difference([2, 1, 5], [2, 3])); 
   // => [1, 5]
   
   /**
@@ -26,13 +26,11 @@
         (a[b[value]] = a[b[value]] || []).push(b);
         return a;
     }, {});
-    
-    console.log(groupedArr);
-    
-    return groupBy;
+        
+    return groupedArr;
   }
   
-  groupBy([{ gender: 'male', name: 'Max'}, { gender: 'male', name: 'Fred'}, { gender: 'female', name: 'Jane'}], 'gender'); 
+  console.log(groupBy([{ gender: 'male', name: 'Max'}, { gender: 'male', name: 'Fred'}, { gender: 'female', name: 'Jane'}], 'gender')); 
   /**
    * => {
    *  male: [{ gender: 'male', name: 'Max'}, { gender: 'male', name: 'Fred'}],
@@ -45,23 +43,21 @@
    */
   function flatten(array) {
     
-    let flattedArray = array.reduce((acc, val) => acc.concat(val), []);
+    var flattedArr = array.reduce((acc, val) => acc.concat(val), []);
 
     // Or we can use experimental technology:
-    // let flattedArray = array.flat();
-    
-    console.log(flattedArray);
-    
-    return flattedArray;
+    // var flattedArr = array.flat();
+        
+    return flattedArr;
   }
   
-  flatten([1, [2, [3, [4]], 5]]);
+  console.log(flatten([1, [2, [3, [4]], 5]]));
   // => [1, 2, [3, [4]], 5]
   
-  flatten([1, 2, 3, 4, 5]);
+  console.log(flatten([1, 2, 3, 4, 5]));
   // => [1, 2, 3, 4, 5]
   
-  flatten([1, [2, 3], 4, 5]);
+  console.log(flatten([1, [2, 3], 4, 5]));
   // => [1, 2, 3, 4, 5]
   
   /**
@@ -79,7 +75,7 @@
     return Object.keys(obj);
   }
   
-  uniq([2, 1, 2]);
+  console.log(uniq([2, 1, 2]));
   // => [2, 1]
   
   /**
@@ -88,20 +84,18 @@
    */
   function chunk(array, size) {
     
-    var results = [];
+    var newArr = [];
 
     while (array.length) {
-      results.push(array.splice(0, size));
+      newArr.push(array.splice(0, size));
     }
-
-    console.log(results);
     
-    return results;
+    return newArr;
   }
   
-  chunk(['a', 'b', 'c', 'd'], 2);
+  console.log(chunk(['a', 'b', 'c', 'd'], 2));
   // => [['a', 'b'], ['c', 'd']]
    
-  chunk(['a', 'b', 'c', 'd'], 3);
+  console.log(chunk(['a', 'b', 'c', 'd'], 3));
   // => [['a', 'b', 'c'], ['d']]
   
