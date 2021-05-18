@@ -17,7 +17,7 @@
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-node-resolve": "^4.2.3",
-    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-serve": "^1.0.2",
     "rollup-watch": "^4.3.1"
   },
   "scripts": {
